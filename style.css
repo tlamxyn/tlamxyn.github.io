@@ -5,13 +5,18 @@
     padding: 0;
 }
 
-/* Root variable */
+/* Declare variable */
 :root {
+    /* Light Scheme */
     --purple-color: rgb(173, 123, 233);
     --navy-color: rgb(62, 84, 172);
     --blue-color: rgb(191, 220, 229);
     --grey-color: rgb(238, 238, 238);
-
+    /* Dark Scheme */
+    --black-color: rgb(46, 7, 63);
+    --darkpurple-color: rgb(122, 28, 172);
+    --lightpurple-color: rgb(173, 73, 225);
+    --shinepurple-color: rgb(235, 211, 248);
 }
 
 /* ELEMENT FIELD_____________________________________________START*/
@@ -27,19 +32,21 @@ body {
 /* THEME FIELD_______________________________________________START*/
 
 /* This class contains basic theme for normal block */
-.normal-container {
-    background-color: var(--grey-color);
-    color: var(--purple-color);
+.container {
+    display: grid;
+    grid-template: 1;
+    align-items: center;
+    justify-content: center;
 }
 
 .hello-container {
-    background-color: var(--purple-color);
+    background-color: var(--blue-color);
     color: var(--navy-color);
 }
 
 /* THEME FIELD_______________________________________________END*/
 
-/* FEATURE FIELD_______________________________________________START*/
+/* FEATURE FIELD_____________________________________________START*/
 
 /* This class makes a div have full screen size when it's parent is body*/
 .full-screen {
@@ -47,4 +54,23 @@ body {
     height: 100vh;
 }
 
-/* FEATURE FIELD_______________________________________________END*/
+/* FEATURE FIELD_____________________________________________END*/
+
+
+/* MEDIA FIELD_______________________________________________START*/
+
+@media (prefers-color-scheme: light) {
+    .hello-container {
+        background-color: var(--blue-color);
+        color: var(--navy-color);
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    .hello-container {
+        background-color: var(--black-color);
+        color: var(--shinepurple-color);
+    }
+}
+
+/* MEDIA FIELD_______________________________________________END*/
