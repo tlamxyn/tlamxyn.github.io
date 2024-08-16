@@ -1,30 +1,50 @@
+/* Prevent suprise margin and padding */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    /* Below line need to be commented after development state */
-    /* border: 1px solid black; */
-
 }
 
+/* Root variable */
 :root {
     --purple-color: rgb(173, 123, 233);
     --navy-color: rgb(62, 84, 172);
     --blue-color: rgb(191, 220, 229);
     --grey-color: rgb(238, 238, 238);
+
 }
 
-.full-screen-size {
-    width: 100vw;
-    height: 100vh;
+/* ELEMENT FIELD_____________________________________________START*/
+
+body {
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
 }
 
-.parent-size {
-    width: 100%;
-    height: 100%;
+/* ELEMENT FIELD_____________________________________________END*/
+
+/* THEME FIELD_______________________________________________START*/
+
+/* This class contains basic theme for normal block */
+.normal-container {
+    background-color: var(--grey-color);
+    color: var(--purple-color);
 }
 
-.introduce {
+.hello-container {
     background-color: var(--purple-color);
     color: var(--navy-color);
 }
+
+/* THEME FIELD_______________________________________________END*/
+
+/* FEATURE FIELD_______________________________________________START*/
+
+/* This class makes a div have full screen size when it's parent is body*/
+.full-screen {
+    width: 100%;
+    height: 100vh;
+}
+
+/* FEATURE FIELD_______________________________________________END*/
